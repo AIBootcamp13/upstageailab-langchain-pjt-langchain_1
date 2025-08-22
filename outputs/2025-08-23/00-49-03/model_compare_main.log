@@ -1,0 +1,74 @@
+[2025-08-23 00:49:03,785][src.utils.version_manager][INFO] - === 모델 비교 실행 시작 ===
+[2025-08-23 00:49:03,786][src.utils.version_manager][INFO] - 설정 정보:
+llm:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.7
+data:
+  path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+  chunk_size: 1000
+  chunk_overlap: 50
+embedding:
+  provider: openai
+  model_name: text-embedding-ada-002
+vector_store:
+  type: faiss
+  persist_directory: faiss_db
+retriever:
+  type: ensemble
+  weights:
+  - 0.5
+  - 0.5
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+langsmith:
+  enabled: true
+  project_name: langchain-rag-project
+  session_name: rag-session
+  tags:
+  - rag
+  - pdf
+  - qa
+  tracing: true
+
+[2025-08-23 00:49:03,786][src.utils.version_manager][INFO] - LangSmith 자동 추적이 활성화되었습니다.
+[2025-08-23 00:49:03,786][src.utils.version_manager][INFO] - 프로젝트: langchain-rag-project
+[2025-08-23 00:49:03,786][src.utils.version_manager][INFO] - 세션: rag-session_20250823_004903
+[2025-08-23 00:49:06,168][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:06,579][faiss.loader][INFO] - Loading faiss with AVX512 support.
+[2025-08-23 00:49:06,703][faiss.loader][INFO] - Successfully loaded faiss with AVX512 support.
+[2025-08-23 00:49:06,725][src.utils.version_manager][INFO] - === 모델 비교 시작 (2개 모델, 5개 질문) ===
+[2025-08-23 00:49:07,239][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:10,024][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:49:10,041][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 3.32초
+[2025-08-23 00:49:10,973][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:13,619][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:49:13,627][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 3.59초
+[2025-08-23 00:49:14,424][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:17,698][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:49:17,702][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 4.08초
+[2025-08-23 00:49:18,400][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:21,909][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:49:21,913][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 4.21초
+[2025-08-23 00:49:22,385][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:25,948][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:49:25,952][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 4.04초
+[2025-08-23 00:49:26,211][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:30,280][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:49:30,282][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 4.33초
+[2025-08-23 00:49:30,662][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:32,180][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:49:32,182][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 1.90초
+[2025-08-23 00:49:32,534][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:36,238][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:49:36,241][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 4.06초
+[2025-08-23 00:49:36,585][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:40,685][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:49:40,696][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 4.45초
+[2025-08-23 00:49:41,051][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:49:45,280][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:49:45,283][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 4.59초
+[2025-08-23 00:49:45,284][src.utils.version_manager][INFO] - 비교 결과 저장: results/model_comparison_08230049.json
+[2025-08-23 00:49:45,284][src.utils.version_manager][INFO] - 리포트 생성: results/model_comparison_report_08230049.md
+[2025-08-23 00:49:45,284][src.utils.version_manager][INFO] - === 모델 비교 실행 완료 ===

@@ -1,0 +1,43 @@
+[2025-08-22 23:52:29,265][src.utils.version_manager][INFO] - === 새로운 실행 시작 ===
+[2025-08-22 23:52:29,267][src.utils.version_manager][INFO] - 설정 정보:
+llm:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.7
+data:
+  path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+  chunk_size: 1000
+  chunk_overlap: 50
+embedding:
+  provider: openai
+  model_name: text-embedding-ada-002
+vector_store:
+  type: faiss
+  persist_directory: faiss_db
+retriever:
+  type: ensemble
+  weights:
+  - 0.5
+  - 0.5
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+langsmith:
+  enabled: true
+  project_name: langchain-rag-project
+  session_name: rag-session
+  tags:
+  - rag
+  - pdf
+  - qa
+  tracing: true
+
+[2025-08-22 23:52:29,268][src.utils.version_manager][WARNING] - LANGCHAIN_API_KEY가 설정되지 않았습니다. LangSmith 추적이 비활성화됩니다.
+[2025-08-22 23:52:30,782][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-22 23:52:31,180][faiss.loader][INFO] - Loading faiss with AVX512 support.
+[2025-08-22 23:52:31,243][faiss.loader][INFO] - Successfully loaded faiss with AVX512 support.
+[2025-08-22 23:52:32,088][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-22 23:52:34,223][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-22 23:52:34,232][src.utils.version_manager][INFO] - 질문: 미국 바이든 대통령이 몇년 몇월 몇일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했나요?
+[2025-08-22 23:52:34,233][src.utils.version_manager][INFO] - 답변: 미국 바이든 대통령은 2023년 10월 30일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했습니다. (페이지 3)
+[2025-08-22 23:52:34,233][src.utils.version_manager][INFO] - === 실행 완료 ===

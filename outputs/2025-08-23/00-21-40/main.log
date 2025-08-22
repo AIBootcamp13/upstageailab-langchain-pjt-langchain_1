@@ -1,0 +1,48 @@
+[2025-08-23 00:21:40,419][src.utils.version_manager][INFO] - === 새로운 실행 시작 ===
+[2025-08-23 00:21:40,421][src.utils.version_manager][INFO] - 설정 정보:
+llm:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.7
+data:
+  path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+  chunk_size: 1000
+  chunk_overlap: 50
+embedding:
+  provider: openai
+  model_name: text-embedding-ada-002
+vector_store:
+  type: faiss
+  persist_directory: faiss_db
+retriever:
+  type: ensemble
+  weights:
+  - 0.5
+  - 0.5
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+langsmith:
+  enabled: true
+  project_name: langchain-rag-project
+  session_name: rag-session
+  tags:
+  - rag
+  - pdf
+  - qa
+  tracing: true
+
+[2025-08-23 00:21:40,422][src.utils.version_manager][INFO] - LangSmith 자동 추적이 활성화되었습니다.
+[2025-08-23 00:21:40,422][src.utils.version_manager][INFO] - 프로젝트: langchain-rag-project
+[2025-08-23 00:21:40,422][src.utils.version_manager][INFO] - 세션: rag-session_20250823_002140
+[2025-08-23 00:21:41,552][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:21:41,863][faiss.loader][INFO] - Loading faiss with AVX512 support.
+[2025-08-23 00:21:41,925][faiss.loader][INFO] - Successfully loaded faiss with AVX512 support.
+[2025-08-23 00:21:43,186][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:21:45,631][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - 질문: 미국 바이든 대통령이 몇년 몇월 몇일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했나요?
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - 답변: 미국 바이든 대통령은 2023년 10월 30일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했습니다. (페이지 3)
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - LangSmith 프로젝트: langchain-rag-project
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - LangSmith 세션: rag-session_20250823_002140
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - LangSmith 대시보드: https://smith.langchain.com/projects/p/langchain-rag-project
+[2025-08-23 00:21:45,640][src.utils.version_manager][INFO] - === 실행 완료 ===

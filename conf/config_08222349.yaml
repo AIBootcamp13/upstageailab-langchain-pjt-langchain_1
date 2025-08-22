@@ -31,11 +31,3 @@ retriever:
 chain:
   type: retrieval_qa
   retriever_k: 4
-
-# LangSmith 설정
-langsmith:
-  enabled: true
-  project_name: "langchain-rag-project"
-  session_name: "rag-session"
-  tags: ["rag", "pdf", "qa"]
-  tracing: true

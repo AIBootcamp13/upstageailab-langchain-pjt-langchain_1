@@ -1,0 +1,31 @@
+llm:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.7
+data:
+  path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+  chunk_size: 1000
+  chunk_overlap: 50
+embedding:
+  provider: openai
+  model_name: text-embedding-ada-002
+vector_store:
+  type: faiss
+  persist_directory: faiss_db
+retriever:
+  type: ensemble
+  weights:
+  - 0.5
+  - 0.5
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+langsmith:
+  enabled: true
+  project_name: langchain-rag-project
+  session_name: rag-session
+  tags:
+  - rag
+  - pdf
+  - qa
+  tracing: true

@@ -1,0 +1,14 @@
+[2025-08-23 00:54:15,168][src.utils.version_manager][INFO] - === 바이든 질문 모델 비교 시작 ===
+[2025-08-23 00:54:15,169][src.utils.version_manager][INFO] - LangSmith 자동 추적이 활성화되었습니다.
+[2025-08-23 00:54:15,169][src.utils.version_manager][INFO] - 프로젝트: langchain-rag-project
+[2025-08-23 00:54:15,169][src.utils.version_manager][INFO] - 세션: rag-session_20250823_005415
+[2025-08-23 00:54:16,271][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:54:16,742][faiss.loader][INFO] - Loading faiss with AVX512 support.
+[2025-08-23 00:54:16,805][faiss.loader][INFO] - Successfully loaded faiss with AVX512 support.
+[2025-08-23 00:54:17,416][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:54:19,512][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-08-23 00:54:19,528][src.utils.version_manager][INFO] - [GPT-4o] 실행시간: 2.71초, 성공: True
+[2025-08-23 00:54:20,079][httpx][INFO] - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-08-23 00:54:22,689][httpx][INFO] - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2025-08-23 00:54:22,703][src.utils.version_manager][INFO] - [Claude-3.5-Haiku] 실행시간: 3.17초, 성공: True
+[2025-08-23 00:54:22,703][src.utils.version_manager][INFO] - === 바이든 질문 모델 비교 완료 ===

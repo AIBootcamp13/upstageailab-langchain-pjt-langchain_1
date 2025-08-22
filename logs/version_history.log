@@ -1,0 +1,44 @@
+2025-08-22 23:49:43,406 - INFO - 버전 생성: src/main.py -> src/main_08222349.py
+2025-08-22 23:49:43,406 - INFO - 변경 사항: LangSmith 통합 전 백업
+2025-08-22 23:49:43,406 - INFO - 버전 생성: src/utils/document_loaders.py -> src/utils/document_loaders_08222349.py
+2025-08-22 23:49:43,406 - INFO - 변경 사항: LangSmith 통합 전 백업
+2025-08-22 23:49:43,406 - INFO - 버전 생성: src/components/vectorstores.py -> src/components/vectorstores_08222349.py
+2025-08-22 23:49:43,407 - INFO - 변경 사항: LangSmith 통합 전 백업
+2025-08-22 23:49:43,407 - INFO - 버전 생성: conf/config.yaml -> conf/config_08222349.yaml
+2025-08-22 23:49:43,407 - INFO - 변경 사항: LangSmith 통합 전 백업
+2025-08-23 00:46:04,414 - INFO - 버전 생성: src/main.py -> src/main_08230046.py
+2025-08-23 00:46:04,415 - INFO - 변경 사항: 모델 비교 기능 추가 전 백업
+2025-08-23 00:46:04,416 - INFO - 버전 생성: src/utils/document_loaders.py -> src/utils/document_loaders_08230046.py
+2025-08-23 00:46:04,417 - INFO - 변경 사항: 모델 비교 기능 추가 전 백업
+2025-08-23 00:46:04,418 - INFO - 버전 생성: src/components/vectorstores.py -> src/components/vectorstores_08230046.py
+2025-08-23 00:46:04,418 - INFO - 변경 사항: 모델 비교 기능 추가 전 백업
+2025-08-23 00:46:04,418 - INFO - 버전 생성: conf/config.yaml -> conf/config_08230046.yaml
+2025-08-23 00:46:04,418 - INFO - 변경 사항: 모델 비교 기능 추가 전 백업
+2025-08-23 00:58:25,816 - INFO - 버전 생성: src/main.py -> src/main_08230058.py
+2025-08-23 00:58:25,816 - INFO - 변경 사항: 웹 인터페이스 구현 전 백업
+2025-08-23 00:58:25,817 - INFO - 버전 생성: src/utils/document_loaders.py -> src/utils/document_loaders_08230058.py
+2025-08-23 00:58:25,817 - INFO - 변경 사항: 웹 인터페이스 구현 전 백업
+2025-08-23 00:58:25,817 - INFO - 버전 생성: src/components/vectorstores.py -> src/components/vectorstores_08230058.py
+2025-08-23 00:58:25,817 - INFO - 변경 사항: 웹 인터페이스 구현 전 백업
+2025-08-23 00:58:25,817 - INFO - 버전 생성: conf/config.yaml -> conf/config_08230058.yaml
+2025-08-23 00:58:25,817 - INFO - 변경 사항: 웹 인터페이스 구현 전 백업
+2025-08-23 01:03:15,372 - INFO - === 웹 인터페이스 구현 완료 ===
+2025-08-23 01:03:15,373 - INFO - Streamlit 웹 인터페이스 v1.0 구현: src/web/streamlit_app_v1.py
+2025-08-23 01:03:15,373 - INFO - - 기능: 캐싱된 RAG 파이프라인, 대화형 차트, 그라디언트 스타일링
+2025-08-23 01:03:15,373 - INFO - - 특징: 실시간 진행바, 성능 메트릭 비교, 상세 응답 분석
+2025-08-23 01:03:15,373 - INFO - Gradio 웹 인터페이스 v2.0 구현: src/web/gradio_app_v2.py
+2025-08-23 01:03:15,373 - INFO - - 기능: 고급 테마, 드롭다운 질문 선택, 실시간 차트
+2025-08-23 01:03:15,373 - INFO - - 특징: 글로벌 파이프라인 관리, 다른 아키텍처 접근법
+2025-08-23 01:03:15,373 - INFO - === 웹 인터페이스 테스트 준비 완료 ===
+2025-08-23 01:03:43,145 - INFO - LangSmith 자동 추적이 활성화되었습니다.
+2025-08-23 01:03:43,146 - INFO - 프로젝트: langchain-rag-project-gradio
+2025-08-23 01:03:43,146 - INFO - 세션: gradio-session_20250823_010343
+2025-08-23 01:03:43,399 - INFO - HTTP Request: GET http://localhost:7861/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-08-23 01:03:43,415 - INFO - HTTP Request: HEAD http://localhost:7861/ "HTTP/1.1 200 OK"
+2025-08-23 01:08:10,451 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 01:08:12,844 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 01:08:13,564 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 01:08:16,885 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 01:14:31,124 - INFO - LangSmith 자동 추적이 활성화되었습니다.
+2025-08-23 01:14:31,124 - INFO - 프로젝트: langchain-rag-project-gradio
+2025-08-23 01:14:31,124 - INFO - 세션: gradio-session_20250823_011431

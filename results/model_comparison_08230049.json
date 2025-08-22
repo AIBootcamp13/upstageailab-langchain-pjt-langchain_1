@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "total_questions": 5,
+    "total_models": 2,
+    "timestamp": "2025-08-23T00:49:45.283566+09:00"
+  },
+  "model_performance": {
+    "GPT-4o": {
+      "success_rate": 1.0,
+      "average_response_time": 3.556795072555542,
+      "average_response_length": 72.4,
+      "average_tokens": 21.4,
+      "total_questions": 5,
+      "successful_responses": 5,
+      "failed_responses": 0
+    },
+    "Claude-3.5-Haiku": {
+      "success_rate": 1.0,
+      "average_response_time": 4.154237413406372,
+      "average_response_length": 150.2,
+      "average_tokens": 42.2,
+      "total_questions": 5,
+      "successful_responses": 5,
+      "failed_responses": 0
+    }
+  },
+  "detailed_comparison": [
+    {
+      "question_id": 1,
+      "question": "미국 바이든 대통령이 몇년 몇월 몇일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했나요?",
+      "timestamp": "2025-08-23T00:49:06.725819+09:00",
+      "models": [
+        {
+          "model_name": "GPT-4o",
+          "model_provider": "openai",
+          "model_id": "gpt-4o",
+          "temperature": 0.7,
+          "response": "미국 바이든 대통령은 2023년 10월 30일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했습니다. (페이지 3)",
+          "execution_time": 3.3156228065490723,
+          "success": true,
+          "error": null,
+          "response_length": 91,
+          "tokens_estimated": 27
+        },
+        {
+          "model_name": "Claude-3.5-Haiku",
+          "model_provider": "anthropic",
+          "model_id": "claude-3-5-haiku-20241022",
+          "temperature": 0.7,
+          "response": "문서의 3페이지에 따르면, 미국 바이든 대통령은 2023년 10월 30일에 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 사용을 보장하기 위한 행정명령을 발표했습니다.",
+          "execution_time": 3.585871934890747,
+          "success": true,
+          "error": null,
+          "response_length": 98,
+          "tokens_estimated": 28
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "question": "AI 안전성 정상회의에 참가한 28개국들이 AI 안전 보장을 위한 협력 방안을 담은 블레츨리 선언을 발표한 나라는 어디인가요?",
+      "timestamp": "2025-08-23T00:49:13.627779+09:00",
+      "models": [
+        {
+          "model_name": "GPT-4o",
+          "model_provider": "openai",
+          "model_id": "gpt-4o",
+          "temperature": 0.7,
+          "response": "AI 안전성 정상회의에 참가한 28개국들이 AI 안전 보장을 위한 협력 방안을 담은 블레츨리 선언을 발표한 나라는 영국입니다 (page 5).",
+          "execution_time": 4.075016021728516,
+          "success": true,
+          "error": null,
+          "response_length": 79,
+          "tokens_estimated": 24
+        },
+        {
+          "model_name": "Claude-3.5-Haiku",
+          "model_provider": "anthropic",
+          "model_id": "claude-3-5-haiku-20241022",
+          "temperature": 0.7,
+          "response": "5페이지에 따르면, 영국이 2023년 11월 1~2일 블레츨리 파크에서 AI 안전성 정상회의를 개최했으며, 이 회의에 28개국 대표들이 참가하여 AI 위험 관리를 위한 '블레츨리 선언'을 발표했습니다. 따라서 블레츨리 선언을 발표한 나라는 영국입니다.",
+          "execution_time": 4.210158824920654,
+          "success": true,
+          "error": null,
+          "response_length": 140,
+          "tokens_estimated": 39
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "question": "구글이 앤스로픽에 투자한 금액은 총 얼마인가요?",
+      "timestamp": "2025-08-23T00:49:21.913392+09:00",
+      "models": [
+        {
+          "model_name": "GPT-4o",
+          "model_provider": "openai",
+          "model_id": "gpt-4o",
+          "temperature": 0.7,
+          "response": "구글은 앤스로픽에 총 20억 달러를 투자하기로 합의하였으며, 5억 달러를 우선 투자하고 향후 15억 달러를 추가로 투자할 계획입니다. (출처: 페이지 13)",
+          "execution_time": 4.038655757904053,
+          "success": true,
+          "error": null,
+          "response_length": 87,
+          "tokens_estimated": 26
+        },
+        {
+          "model_name": "Claude-3.5-Haiku",
+          "model_provider": "anthropic",
+          "model_id": "claude-3-5-haiku-20241022",
+          "temperature": 0.7,
+          "response": "13페이지에 따르면, 구글은 앤스로픽에 총 20억 달러를 투자하기로 합의했습니다. 구체적으로는 2023년 10월에 5억 달러를 우선 투자하고, 향후 15억 달러를 추가로 투자할 방침입니다. 또한, 2023년 2월에 이미 5억 5,000만 달러를 앤스로픽에 투자한 바 있어, 총 투자 금액은 더 높아질 수 있습니다.",
+          "execution_time": 4.330322265625,
+          "success": true,
+          "error": null,
+          "response_length": 175,
+          "tokens_estimated": 52
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "question": "삼성전자가 자체 개발한 생성 AI 모델의 이름은 무엇인가요?",
+      "timestamp": "2025-08-23T00:49:30.282783+09:00",
+      "models": [
+        {
+          "model_name": "GPT-4o",
+          "model_provider": "openai",
+          "model_id": "gpt-4o",
+          "temperature": 0.7,
+          "response": "삼성전자가 자체 개발한 생성 AI 모델의 이름은 '삼성 가우스'입니다. (페이지 12)",
+          "execution_time": 1.8999757766723633,
+          "success": true,
+          "error": null,
+          "response_length": 48,
+          "tokens_estimated": 14
+        },
+        {
+          "model_name": "Claude-3.5-Haiku",
+          "model_provider": "anthropic",
+          "model_id": "claude-3-5-haiku-20241022",
+          "temperature": 0.7,
+          "response": "12페이지에 따르면, 삼성전자가 자체 개발한 생성 AI 모델의 이름은 '삼성 가우스(Samsung Gauss)'입니다. 이 모델은 정규분포 이론을 정립한 천재 수학자 가우스(Gauss)의 이름을 본떠 만들어졌으며, 언어, 코드, 이미지의 3개 모델로 구성되어 있습니다.",
+          "execution_time": 4.058489084243774,
+          "success": true,
+          "error": null,
+          "response_length": 150,
+          "tokens_estimated": 39
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "question": "갈릴레오의 LLM 환각 지수 평가에서 가장 우수한 성능을 보인 모델은 무엇인가요?",
+      "timestamp": "2025-08-23T00:49:36.241847+09:00",
+      "models": [
+        {
+          "model_name": "GPT-4o",
+          "model_provider": "openai",
+          "model_id": "gpt-4o",
+          "temperature": 0.7,
+          "response": "갈릴레오의 LLM 환각 지수 평가에서 가장 우수한 성능을 보인 모델은 GPT-4입니다. (페이지 19)",
+          "execution_time": 4.454704999923706,
+          "success": true,
+          "error": null,
+          "response_length": 57,
+          "tokens_estimated": 16
+        },
+        {
+          "model_name": "Claude-3.5-Haiku",
+          "model_provider": "anthropic",
+          "model_id": "claude-3-5-haiku-20241022",
+          "temperature": 0.7,
+          "response": "19페이지에 따르면, 갈릴레오의 LLM 환각 지수 평가에서 OpenAI의 GPT-4가 가장 우수한 성능을 보였습니다. 구체적으로 세 가지 작업 유형(검색 증강 생성을 포함한 질문과 답변, RAG 없는 질문과 답변, 긴 형식의 텍스트 생성) 전체에서 GPT-4가 최고의 성능을 기록했으며, GPT-3.5도 거의 동등한 성능을 발휘했습니다.",
+          "execution_time": 4.586344957351685,
+          "success": true,
+          "error": null,
+          "response_length": 188,
+          "tokens_estimated": 53
+        }
+      ]
+    }
+  ]
+}
