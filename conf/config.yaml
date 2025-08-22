@@ -1,0 +1,33 @@
+# @package _global_
+
+# 기본 LLM 설정
+llm:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.7
+
+# 데이터 로더 설정
+data:
+  path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+  chunk_size: 1000
+  chunk_overlap: 50
+
+# 임베딩 모델 설정
+embedding:
+  provider: openai
+  model_name: text-embedding-ada-002
+
+# 벡터 스토어 설정
+vector_store:
+  type: faiss
+  persist_directory: ./faiss_db
+
+# 검색기 설정
+retriever:
+  type: ensemble # bm25, dense, ensemble 중 선택
+  weights: [0.5, 0.5] # ensemble retriever 사용 시 BM25와 Dense retriever의 가중치
+
+# 체인 설정
+chain:
+  type: retrieval_qa
+  retriever_k: 4

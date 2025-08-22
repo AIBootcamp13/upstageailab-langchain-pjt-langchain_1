@@ -86,6 +86,7 @@ dependencies = [
     "pinecone",
     "wikipedia",
     "scikit-learn",
+    "hydra-core"
 ]
 
 [build-system]
