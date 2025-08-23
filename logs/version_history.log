@@ -42,3 +42,13 @@
 2025-08-23 01:14:31,124 - INFO - LangSmith 자동 추적이 활성화되었습니다.
 2025-08-23 01:14:31,124 - INFO - 프로젝트: langchain-rag-project-gradio
 2025-08-23 01:14:31,124 - INFO - 세션: gradio-session_20250823_011431
+2025-08-23 09:45:59,819 - INFO - === 웹 인터페이스 테스트 완료 ===
+2025-08-23 09:45:59,820 - INFO - ✅ Streamlit v1.0 실행 성공: http://localhost:8501
+2025-08-23 09:45:59,820 - INFO - ✅ Gradio v2.0 실행 성공: http://localhost:7861
+2025-08-23 09:45:59,820 - INFO - ✅ 모델 비교 기능 정상 작동 확인 (API 호출 성공)
+2025-08-23 09:45:59,820 - INFO - ✅ 캐싱 문제 해결 (@st.cache_resource 사용)
+2025-08-23 09:45:59,820 - INFO - === 프로젝트 완성 ===
+2025-08-23 09:54:26,610 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 09:54:31,684 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 09:54:32,040 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 09:54:35,731 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"

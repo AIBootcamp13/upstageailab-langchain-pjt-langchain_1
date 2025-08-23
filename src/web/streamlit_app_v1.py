@@ -83,7 +83,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-@st.cache_data
+@st.cache_resource
 def load_rag_pipeline():
     """RAG 파이프라인 초기화 (캐싱)"""
     load_dotenv()
