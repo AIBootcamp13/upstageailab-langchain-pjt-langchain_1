@@ -52,3 +52,107 @@
 2025-08-23 09:54:31,684 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-08-23 09:54:32,040 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
 2025-08-23 09:54:35,731 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 12:49:35,326 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 12:49:39,481 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 12:49:40,044 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-23 12:49:44,578 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 13:49:54,061 - INFO - === 법률 도메인 시스템 구현 완료 ===
+2025-08-23 13:49:54,062 - INFO - 📚 데이터: 17개 대법원 판례 JSON 파일 로드
+2025-08-23 13:49:54,062 - INFO - 🔍 질문: 취업규칙 불이익 변경, 퇴직금 지급 기일 등 법률 질문
+2025-08-23 13:49:54,062 - INFO - ⚖️ Streamlit Law v3.0 실행: http://localhost:8502
+2025-08-23 13:49:54,062 - INFO - ⚖️ Gradio Law v5.0 실행: http://localhost:7863
+2025-08-23 13:49:54,062 - INFO - 🤖 모델: GPT-4o vs Claude-3.5-Haiku 비교
+2025-08-23 13:49:54,062 - INFO - ✨ 특징: 키워드 기반 판례 검색, 실시간 모델 비교, 성능 차트
+2025-08-23 13:49:54,063 - INFO - === 법률 AI 분석 시스템 완성 ===
+2025-08-23 13:57:00,437 - INFO - === 최종 수정 완료 ===
+2025-08-23 13:57:00,438 - INFO - 🔧 문제 해결: Import 오류 수정
+2025-08-23 13:57:00,438 - INFO - ✅ Streamlit Law v6.0 실행 성공: http://localhost:8503
+2025-08-23 13:57:00,438 - INFO - ✅ Gradio Law v5.0 실행 성공: http://localhost:7863
+2025-08-23 13:57:00,438 - INFO - 🚀 두 인터페이스 모두 정상 작동
+2025-08-23 13:57:00,438 - INFO - 📚 17개 판례 기반 키워드 검색 시스템
+2025-08-23 13:57:00,438 - INFO - 🤖 GPT-4o vs Claude-3.5-Haiku 실시간 비교
+2025-08-23 13:57:00,438 - INFO - === 법률 도메인 AI 시스템 최종 완성 ===
+2025-08-23 14:04:52,978 - INFO - === Gradio 차트 문제 해결 완료 ===
+2025-08-23 14:04:52,978 - INFO - 🔧 수정 내용: Plotly HTML → Matplotlib Plot 변경
+2025-08-23 14:04:52,979 - INFO - 📊 차트 기능: 막대 그래프 + 응답시간 표시
+2025-08-23 14:04:52,979 - INFO - ✅ Gradio Law v5.0 정상 작동: http://localhost:7863
+2025-08-23 14:04:52,979 - INFO - ✅ Streamlit Law v6.0 정상 작동: http://localhost:8503
+2025-08-23 14:04:52,979 - INFO - 🎯 두 인터페이스 모두 완벽한 성능 비교 차트 제공
+2025-08-23 14:04:52,979 - INFO - === 법률 도메인 시스템 최종 완성 ===
+2025-08-23 14:28:07,055 - INFO - === RAG 성능 개선 비교 분석 시작 v08231426 ===
+2025-08-23 14:28:07,055 - WARNING - LANGCHAIN_API_KEY가 설정되지 않았습니다. LangSmith 추적이 비활성화됩니다.
+2025-08-23 14:28:14,578 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:28:14,593 - ERROR - RAG 성능 개선 분석 중 오류: can only concatenate str (not "NoneType") to str
+2025-08-23 14:28:45,095 - INFO - === RAG 성능 개선 비교 분석 시작 v08231426 ===
+2025-08-23 14:28:45,095 - WARNING - LANGCHAIN_API_KEY가 설정되지 않았습니다. LangSmith 추적이 비활성화됩니다.
+2025-08-23 14:28:51,251 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:29:05,506 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:29:11,042 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:29:20,758 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:29:24,871 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:29:31,874 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:29:37,376 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:29:46,587 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:29:54,520 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:29:59,492 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:30:04,657 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:30:15,652 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:30:15,653 - ERROR - RAG 성능 개선 분석 중 오류: unsupported operand type(s) for /: 'str' and 'str'
+2025-08-23 14:30:38,734 - INFO - === RAG 성능 개선 비교 분석 시작 v08231426 ===
+2025-08-23 14:30:38,735 - WARNING - LANGCHAIN_API_KEY가 설정되지 않았습니다. LangSmith 추적이 비활성화됩니다.
+2025-08-23 14:30:43,022 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:30:48,794 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:30:55,294 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:04,536 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:10,106 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:31:13,129 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:31:17,912 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:26,333 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:34,096 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:31:39,180 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:31:45,374 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:56,332 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:31:56,334 - INFO - RAG 성능 개선 분석 완료 - 결과: results/rag_improvement_comparison/rag_improvement_results_20250823_143156.json
+2025-08-23 14:32:33,846 - INFO - === RAG 성능 개선 비교 시스템 v08231426 구현 완료 ===
+2025-08-23 14:32:33,846 - INFO - 📊 분석 결과 요약:
+2025-08-23 14:32:33,846 - INFO - - GPT-4o 평균 개선 점수: 80.8/100 (우수)
+2025-08-23 14:32:33,846 - INFO - - Claude-3.5 평균 개선 점수: 59.2/100 (양호)
+2025-08-23 14:32:33,846 - INFO - - GPT-4o 평균 처리시간: -1.23초 (더 빨라짐)
+2025-08-23 14:32:33,846 - INFO - - Claude-3.5 평균 처리시간: +3.71초 (증가)
+2025-08-23 14:32:33,846 - INFO - 🎯 핵심 성과:
+2025-08-23 14:32:33,846 - INFO - - 순수 LLM vs RAG 적용 4가지 조합 비교 완료
+2025-08-23 14:32:33,846 - INFO - - 개선도 분석 알고리즘 구현 (사건번호 인용, 법률 키워드)
+2025-08-23 14:32:33,846 - INFO - - 17개 판례 기반 키워드 검색 시스템
+2025-08-23 14:32:33,846 - INFO - - JSON/Markdown 상세 보고서 자동 생성
+2025-08-23 14:32:33,847 - INFO - - 한국시간 기반 버전 관리 (_08231426)
+2025-08-23 14:32:33,847 - INFO - === RAG 개선 효과 검증 시스템 완성 ===
+2025-08-23 14:45:00,323 - INFO - === 이전 버전 파일 정리 시작 v08231444 ===
+2025-08-23 14:45:00,323 - INFO - 목표: 사용되지 않는 이전 버전들을 아카이브로 이동
+2025-08-23 14:47:47,478 - INFO - === 이전 버전 파일 정리 완료 v08231444 ===
+2025-08-23 14:47:47,479 - INFO - 📦 아카이브된 파일: 21개
+2025-08-23 14:47:47,479 - INFO - 📁 아카이브 위치: archive/obsolete_versions_08231444/
+2025-08-23 14:47:47,479 - INFO - ✅ 정리된 항목:
+2025-08-23 14:47:47,479 - INFO -   - 사용 불가 웹 인터페이스 4개 (Import 오류)
+2025-08-23 14:47:47,479 - INFO -   - 이전 타임스탬프 버전들 13개
+2025-08-23 14:47:47,479 - INFO -   - 이전 분석 결과 파일 2개
+2025-08-23 14:47:47,479 - INFO - 🎯 현재 활성 시스템:
+2025-08-23 14:47:47,479 - INFO -   - Streamlit Law v6.0: streamlit_law_simple_v6.py (포트 8503)
+2025-08-23 14:47:47,479 - INFO -   - Gradio Law v5.0: gradio_law_simple_v5.py (포트 7863)
+2025-08-23 14:47:47,479 - INFO -   - RAG 개선 비교: rag_improvement_comparison_08231426.py
+2025-08-23 14:47:47,479 - INFO - 📋 아카이브 문서: archive/obsolete_versions_08231444/README.md
+2025-08-23 14:47:47,479 - INFO - === 프로젝트 정리 완료 - 깔끔한 구조 달성 ===
+2025-08-23 14:57:59,617 - INFO - === RAG 성능 개선 비교 분석 시작 v08231426 ===
+2025-08-23 14:57:59,618 - WARNING - LANGCHAIN_API_KEY가 설정되지 않았습니다. LangSmith 추적이 비활성화됩니다.
+2025-08-23 14:58:05,189 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:58:17,066 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:58:23,359 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:58:34,359 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:58:37,293 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:58:41,087 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:58:46,486 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:58:55,146 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:59:02,895 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:59:08,368 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-23 14:59:14,899 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:59:26,539 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-23 14:59:26,541 - INFO - RAG 성능 개선 분석 완료 - 결과: results/rag_improvement_comparison/rag_improvement_results_20250823_145926.json
