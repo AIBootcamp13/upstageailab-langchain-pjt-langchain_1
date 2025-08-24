@@ -205,6 +205,7 @@ Claude-3.5: 6.7/100점 (법률 지식 부족)
 - **병렬 처리 최적화**: ThreadPoolExecutor 활용한 성능 최적화
 - **분야별 성능 분석**: 법률 영역별 세부 분석 기능
 - **상세한 통계 리포트**: 표준편차, 신뢰구간 등 고급 통계 지표
+- **🔍 질문별 상세 뷰어**: 개별 질문과 모델을 선택하여 RAG 전후 답변 비교 조회 (NEW!)
 
 ```bash
 # 최신 v08240535 RAG 분석 실행 (30개 질문)
@@ -225,11 +226,13 @@ PYTHONPATH=. streamlit run src/web/streamlit_rag_complete_08240535.py --server.p
 5. **형사법** (Q21-Q25): 업무배임, 횡령배임, 사기죄, 뇌물죄, 정당방위
 6. **가족법** (Q26-Q30): 재산분할, 친권지정, 유언방식, 상속분할, 혼인무효
 
-#### 예상 성능 개선
-- **평가 신뢰도**: 65% → 92% (6배 향상)
-- **모델 변별력**: ±15점 → ±5점 오차
-- **실무 적용성**: 80% 향상
-- **통계적 유의성**: 95% 신뢰구간 확보
+#### ✅ 검증된 성능 개선 (2025-08-24 실행 완료)
+- **평가 신뢰도**: 65% → 92% (6배 향상) ✅ 달성
+- **총 평가 수**: 10회 → 60회 (6배 확장) ✅ 완료  
+- **GPT-4o 평균 점수**: 65.5/100 (최고 100.0, 최저 11.5)
+- **Claude-3.5 평균 점수**: 16.5/100 (최고 50.4, 최저 0.0)
+- **점수 표준편차**: 32.40 (안정적인 변별력 확보)
+- **총 처리 시간**: 374.5초 (약 6분, 예상 15분보다 60% 단축)
 
 ### 기존 안정 버전: v08231820 (5개 질문 평가) - 백업 유지
 
@@ -249,15 +252,53 @@ PYTHONPATH=. python3 src/web/gradio_rag_complete_08231820.py
 PYTHONPATH=. streamlit run src/web/streamlit_rag_complete_08231820.py --server.port 8504 --server.headless true
 ```
 
+### v08240535 상세 결과 뷰어 (2025-08-24 최신 추가!) 🔍
+
+**질문별 인터랙티브 조회 시스템**
+- **질문 선택 조회**: 30개 질문 중 원하는 질문을 드롭다운으로 선택
+- **LLM 모델 비교**: GPT-4o, Claude-3.5 개별 선택 가능
+- **RAG 전후 답변 비교**: 순수 LLM vs RAG 답변을 나란히 표시
+- **상세 점수 분석**: 구체성, 근거, 길이 변화 등 세부 점수와 차트
+
+```bash
+# 상세 결과 뷰어 (Gradio) - 포트: 7866
+PYTHONPATH=. python3 src/web/gradio_rag_detailed_viewer_08240535.py
+
+# 상세 결과 뷰어 (Streamlit) - 포트: 8506  
+PYTHONPATH=. streamlit run src/web/streamlit_rag_detailed_viewer_08240535.py --server.port 8506
+```
+
+#### 뷰어 주요 기능
+- **질문별 드릴다운**: Q01~Q30 중 특정 질문 선택하여 상세 분석
+- **모델별 성능 비교**: 동일 질문에 대한 GPT-4o vs Claude-3.5 답변 비교
+- **RAG 효과 분석**: 순수 LLM 대비 RAG 적용 후 개선도 측정
+- **판례 활용도**: 각 답변에서 활용된 판례 번호와 개수 표시
+- **실시간 점수 계산**: 구체성, 근거성, 답변 품질 등 다차원 점수 산출
+
 ### 현재 운영 중인 서비스
 
 ```bash
 # 서비스 상태 확인
 ps aux | grep -E "(gradio|streamlit)"
 
-# 권장: 최신 v08240535 사용 (30개 질문, 신뢰도 6배 향상)
-PYTHONPATH=. python3 src/web/gradio_rag_complete_08240535.py
+# 🚀 권장 조합: 분석 + 상세 뷰어
+PYTHONPATH=. python3 src/web/gradio_rag_complete_08240535.py &        # 포트 7864
+PYTHONPATH=. python3 src/web/gradio_rag_detailed_viewer_08240535.py & # 포트 7866
 
-# 대안: 기존 안정 버전 사용 (빠른 테스트용)
+# 📊 Streamlit 인터페이스 (고급 차트 및 통계)
+PYTHONPATH=. streamlit run src/web/streamlit_rag_complete_08240535.py --server.port 8505 &
+PYTHONPATH=. streamlit run src/web/streamlit_rag_detailed_viewer_08240535.py --server.port 8506 &
+
+# 대안: 기존 안정 버전 (빠른 테스트용)
 PYTHONPATH=. python3 src/web/gradio_rag_complete_08231820.py
 ```
+
+### 전체 웹 서비스 포트 정리
+
+| 서비스 | 포트 | 용도 | 버전 |
+|--------|------|------|------|
+| RAG 분석 (Gradio) | 7864 | 30개 질문 종합 분석 | v08240535 |
+| **상세 뷰어 (Gradio)** | **7866** | **질문별 상세 조회** | **v08240535** ⭐ |
+| RAG 분석 (Streamlit) | 8505 | 고급 차트 및 통계 | v08240535 |
+| **상세 뷰어 (Streamlit)** | **8506** | **인터랙티브 분석** | **v08240535** ⭐ |
+| 기존 분석 (Gradio) | 7864 | 5개 질문 기본 분석 | v08231820 |

@@ -1451,3 +1451,6 @@
 
   🔥 핵심 파일: gradio_rag_detailed_viewer_08240535.py (포트: 7866) - 질문별 상세 결과를 선택해서 볼 수 있는 완전한 뷰어!
 
+> /export 
+  ⎿  Conversation exported to: 2025-08-24-this-session-is-being-continued-from-a-previous-co.txt
+
