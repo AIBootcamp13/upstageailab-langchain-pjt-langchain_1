@@ -1,0 +1,4 @@
+# @package data
+path: data/cases_2021_2023.csv
+chunk_size: 1000
+chunk_overlap: 100

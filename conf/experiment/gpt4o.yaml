@@ -1,0 +1,33 @@
+# @package _global_
+# High quality experiment configuration with better models
+defaults:
+  - /llm: gpt4o
+  - /embedding: openai_3_large
+  - /data: large_chunk
+
+langsmith:
+  enabled: true
+  project_name: "legal-qa-high-quality"
+  endpoint: "https://api.smith.langchain.com"
+
+# 벡터 스토어 설정
+vector_store:
+  type: faiss
+  persist_directory: ./faiss_db_high_quality
+
+# 검색기 설정
+retriever:
+  type: ensemble
+  weights: [0.3, 0.7]  # Dense retriever에 더 높은 가중치
+
+# 체인 설정
+chain:
+  type: retrieval_qa
+  retriever_k: 6  # 더 많은 문서 검색
+
+# 전처리 설정
+preprocessing:
+  enabled: true
+  filter_case_types: true
+  target_case_types: ["일반행정", "근로_임금", "민사", "특허", "손해배상"]
+

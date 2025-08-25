@@ -1,0 +1,4 @@
+# @package llm
+provider: google
+model_name: gemini-1.5-flash
+temperature: 0.7

@@ -1,0 +1,33 @@
+# @package _global_
+# Fast experiment configuration for quick testing
+defaults:
+  - /llm: gpt4o_mini
+  - /embedding: openai_3_small
+  - /data: small_chunk
+
+langsmith:
+  enabled: true
+  project_name: "legal-qa-fast"
+  endpoint: "https://api.smith.langchain.com"
+
+# 벡터 스토어 설정
+vector_store:
+  type: faiss
+  persist_directory: ./faiss_db_fast
+
+# 검색기 설정
+retriever:
+  type: dense  # BM25 없이 빠른 검색
+  weights: [0.5, 0.5]
+
+# 체인 설정
+chain:
+  type: retrieval_qa
+  retriever_k: 3  # 적은 수의 문서로 빠른 응답
+
+# 전처리 설정
+preprocessing:
+  enabled: true
+  filter_case_types: false  # 필터링 없이 빠른 처리
+  target_case_types: []
+

@@ -1,0 +1,3 @@
+# @package embedding
+provider: openai
+model_name: text-embedding-3-small

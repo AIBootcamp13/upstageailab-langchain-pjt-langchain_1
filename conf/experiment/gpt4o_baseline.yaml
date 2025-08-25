@@ -1,0 +1,33 @@
+# @package _global_
+# Baseline experiment configuration
+defaults:
+  - /llm: gpt4o
+  - /embedding: openai_ada
+  - /data: base
+
+langsmith:
+  enabled: true
+  project_name: "legal-qa-baseline"
+  endpoint: "https://api.smith.langchain.com"
+
+# 벡터 스토어 설정
+vector_store:
+  type: faiss
+  persist_directory: ./faiss_db
+
+# 검색기 설정
+retriever:
+  type: ensemble
+  weights: [0.5, 0.5]
+
+# 체인 설정
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+
+# 전처리 설정
+preprocessing:
+  enabled: true
+  filter_case_types: false
+  target_case_types: []
+

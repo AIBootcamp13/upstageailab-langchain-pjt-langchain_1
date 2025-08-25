@@ -1,0 +1,30 @@
+# @package _global_
+# Gemini experiment configuration (free & good performance)
+defaults:
+  - /llm: gemini_25_flash
+  - /embedding: google
+  - /data: base
+  - _self_
+
+langsmith:
+  enabled: true
+  project_name: "legal-qa-gemini"
+  endpoint: "https://api.smith.langchain.com"
+
+vector_store:
+  type: faiss
+  persist_directory: ./faiss_db_gemini
+
+retriever:
+  type: ensemble
+  weights: [0.4, 0.6]
+
+chain:
+  type: retrieval_qa
+  retriever_k: 4
+
+preprocessing:
+  enabled: true
+  filter_case_types: false
+  target_case_types: []
+
