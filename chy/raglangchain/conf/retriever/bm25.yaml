@@ -1,0 +1,2 @@
+_target_: rag.retriever.bm25_retriever.BM25Retriever
+top_k: ${data.top_k}

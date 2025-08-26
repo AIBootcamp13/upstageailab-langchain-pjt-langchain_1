@@ -1,0 +1,2 @@
+_target_: rag.retriever.frequency_retriever.FrequencyRetriever
+top_k: ${data.top_k}

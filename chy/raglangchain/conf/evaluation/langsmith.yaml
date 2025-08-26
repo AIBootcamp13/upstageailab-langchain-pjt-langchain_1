@@ -1,0 +1,4 @@
+_target_: rag.evaluation.langsmith_runner.LangSmithEvaluatorRunner
+enabled: ${langsmith.enabled}
+project: ${langsmith.project}
+tags: ${langsmith.tags}

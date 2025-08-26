@@ -1,0 +1,3 @@
+_target_: rag.llms.openai.OpenAILLM
+model: "gpt-4o"
+api_key: null

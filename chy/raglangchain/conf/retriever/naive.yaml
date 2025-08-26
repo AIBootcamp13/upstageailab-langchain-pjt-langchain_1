@@ -1,0 +1,2 @@
+_target_: rag.retriever.naive.NaiveRetriever
+top_k: ${data.top_k}

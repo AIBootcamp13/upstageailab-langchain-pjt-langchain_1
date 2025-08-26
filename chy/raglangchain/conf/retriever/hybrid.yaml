@@ -1,0 +1,5 @@
+_target_: rag.retriever.hybrid_retriever.HybridRetriever
+top_k_total: ${data.top_k}
+weights:
+  bm25: 0.5
+  dense: 0.5

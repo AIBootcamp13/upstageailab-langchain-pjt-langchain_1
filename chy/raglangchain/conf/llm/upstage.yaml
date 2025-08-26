@@ -1,0 +1,4 @@
+_target_: rag.llms.upstage.UpstageLLM
+endpoint: "https://api.upstage.ai/v1/solar"
+model: solar-pro2
+api_key: null # .env에서 가져와 주입됨

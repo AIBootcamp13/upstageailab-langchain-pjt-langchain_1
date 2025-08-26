@@ -1,0 +1,2 @@
+_target_: rag.datasets.case_docs.CaseDocsDataset
+dataset_dir: "data/law"

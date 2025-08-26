@@ -1,0 +1,3 @@
+_target_: rag.retriever.legal_qa.LegalQARetriever
+top_k: ${data.top_k}
+index_path: "indexes/dense.faiss"

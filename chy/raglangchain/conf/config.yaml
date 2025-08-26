@@ -1,0 +1,49 @@
+hydra: # hydra 로그 파일 생성 최대한 끄기
+  run:
+    dir: ./outputs/
+  job_logging:
+    root:
+      handlers: [ ]
+    output_subdir: null
+
+project:
+  name: "LLMOps RAG 벤치마크 분석"
+  version: "v0.0.1"
+
+defaults:
+  - _self_
+  - llm: upstage
+  - embedder: jinav3
+  - retriever: naive
+  - dataset: case_docs
+  - prompt: qa
+  - evaluation: langsmith
+  - evaluation/metrics: metrics
+
+data:
+  top_k: 3
+  law_cases_dir: "data/law"
+  # law_cases_dir: "data/dummy"
+
+exp:
+  scenario: simple
+  temperature: 0.8
+  max_tokens: 1024
+  make_embedding: True
+  question: "취업규칙을 근로자에게 불리하게 변경할 때 사용자가 지켜야 할 법적 요건은 무엇인가요?"
+#  question: "외계인"
+
+langsmith:
+  enabled: true
+  project: "LLMOps Evaluation"
+  tags: [ "RAG", "Legal" ]
+
+opts:
+  llms: [ "openai", "anthropic", "upstage", "custom", "mock" ]
+  datasets: [ "case_docs", "default", "dataframe" ]
+  scenarios: [ "simple", "comparison", "demo" ]
+  retrievers: [ "naive", "legalQA", "frequency", "bm25", "dense", "hybrid" ]
+
+
+
+

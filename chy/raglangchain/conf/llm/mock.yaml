@@ -1,0 +1,3 @@
+_target_: rag.llms.mock.MockLLM
+model: "no-model-card"
+api_key: null
