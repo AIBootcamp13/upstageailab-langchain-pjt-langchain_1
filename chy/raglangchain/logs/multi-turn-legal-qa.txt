@@ -1,0 +1,43 @@
+[250828-00:51:37] [INFO] [__main__:35] >>> LLMOps RAG 벤치마크 분석 (v0.0.1) <<<
+[250828-00:51:37] [INFO] [rag.utils.env_loader:19] loaded env file (done)
+[250828-00:51:37] [INFO] [rag.trace.langsmith:21] ================================================================================
+[250828-00:51:37] [INFO] [rag.trace.langsmith:24] langsmith tracer (disabled)
+[250828-00:51:37] [INFO] [rag.trace.langsmith:25] ================================================================================
+[250828-00:51:37] [INFO] [rag.pipeline.pipeline_base:38] build SimplePipeline
+[250828-00:51:37] [INFO] [rag.datasets.case_docs:69] 법률 데이터 디렉토리: data/law
+[250828-00:51:37] [INFO] [rag.datasets.case_docs:83] 총 18개 판례 로드 완료
+[250828-00:51:37] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-00:51:37] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-00:51:38] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-00:51:38] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-00:51:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-00:51:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 1
+[250828-00:51:41] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-00:51:41] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-00:51:43] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-00:51:43] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-00:51:45] [INFO] [__main__:26] ================================================================================
+[250828-00:51:45] [INFO] [__main__:28] LLM 응답[0]:
+네, 저는 대한민국 법률 전문가로서 법률 관련 질문에 답변을 할 수 있습니다. 어떠한 법률 관련 문의사항이 있으면 언제든지 질문해 주세요.
+[250828-00:51:45] [INFO] [__main__:28] LLM 응답[1]:
+변호사는 당사자의 대리인으로서 소송 절차를 주도하고 법률적 조력을 제공하지만, 최종적인 판결 결과에 대한 책임은 법원에 있습니다. 변호사는 의뢰인에게 적절한 법적 조언과 절차를 제공할 의무를 부담하며, 이를 소홀히 한 경우 의뢰인에 대한 손해배상 책임이 발생할 수 있습니다. 다만, 판결 결과 자체가 변호사의 기대와 다르더라도 이는 법원의 독자적 판단에 따른 것이므로, 판결 결과에 대한 직접적인 책임을 지지 않습니다. 다만, 변호사의 고의 또는 과실로 인한 권리 침해나 손해 발생 시에는 예외입니다(민법 제750조 및 제680조 참조).
+[250828-00:51:45] [INFO] [__main__:28] LLM 응답[2]:
+직전에 하신 질문은 "어떤 사건을 위해 선임된 변호사는 판결 결과에 대한 책임이 없나요?"였습니다. 해당 질문에 대한 답변은 앞서 제공된 내용과 같으며, 판결 결과에 대한 책임은 원칙적으로 법원에 있으나 변호사의 고의·과실로 인한 손해 발생 시에는 예외적으로 책임을 질 수 있음을 설명드렸습니다.  
+
+(현재 질문은 법률 답변 요청에 해당하지 않으므로, 추가 문의 사항이 법률 관련이라면 구체적으로 알려주세요.)  
+
+저는 법률 관련 답변 밖에 하지 못 합니다
+[250828-00:51:45] [INFO] [__main__:28] LLM 응답[3]:
+패소 시 변호사 비용 부담 여부는 「민사소송법」 제109조(소송비용의 부담) 및 제110조(소송비용의 확정결정)에 따라 원칙적으로 패소자가 부담합니다. 다만, 변호사 보수 중 소송비용에 산입되는 부분(법원 기준 금액 한도)만 상대방에게 청구 가능하며, 이를 초과하는 실제 지급액은 의뢰인이 변호사와 체결한 계약에 따라 부담합니다. 즉, 형사책임이 아닌 민사소송에서의 패소 시 상대방 변호사 비용의 일부만 부담할 수 있으나, 구체적 비율은 소송 규모·계약 내용 등에 따라 달라질 수 있으므로 관련 서류 검토가 필요합니다.
+[250828-00:51:45] [INFO] [__main__:28] LLM 응답[4]:
+The user inquired whether, even in the absence of criminal liability, if a case is lost, the attorney's fees should only be partially borne by the client. According to the **Civil Procedure Act** Articles 109 (Burden of Litigation Costs) and 110 (Determination of Litigation Costs), the losing party is generally responsible for litigation costs. However:  
+1. Only the portion of the attorney’s fees falling within the court-established limit can be claimed from the opposing party.  
+2. Amounts exceeding this limit, as specified in the client-attorney contract, remain the client’s responsibility.  
+3. The exact allocation may vary depending on case specifics, scale, and contractual terms, necessitating a review of relevant documents.  
+
+This clarification focuses on civil litigation, not criminal cases where attorney fees are typically the client’s sole responsibility.  
+
+저는 법률 관련 답변 밖에 하지 못 합니다
+[250828-00:51:45] [INFO] [__main__:29] ================================================================================
+
+[250828-00:51:45] [INFO] [__main__:46] >>> complete <<<

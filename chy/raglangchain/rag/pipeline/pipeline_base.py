@@ -6,6 +6,7 @@ from langchain_core.runnables import RunnableLambda
 from langsmith import traceable
 
 from rag.datasets.base import BaseDataset
+from rag.history.chat_history import InMemoryChatHistory
 from rag.llms.base_llm import BaseLLM
 from rag.prompts.qa_prompt import QAPrompt
 from rag.utils.logger import get_logger
@@ -30,6 +31,7 @@ class BasePipeline:
         self.prompt: QAPrompt
         self.embedder = None
         self.retriever: BaseRetriever
+        self.chat_history: InMemoryChatHistory
         self._build()
 
     def _build(self):
@@ -40,6 +42,7 @@ class BasePipeline:
         self.retriever: BaseRetriever = self._make_retriever()
         self.prompt: QAPrompt = self._make_prompt()
         self.llm: BaseLLM = self._make_llm_client()
+        self.chat_history: InMemoryChatHistory = InMemoryChatHistory()
 
         if self.cfg.exp.make_embedding:
             self.retriever.build(self.docs, self.cfg)
@@ -68,16 +71,6 @@ class BasePipeline:
     def _add_debug_chain(self):
         return RunnableLambda(debug_step)
 
-    @traceable(name="define chain")
-    def _define_chain(self, question: str):
-        # for debug use RunnableLambda with debug_step fun ( | RunnableLambda(debug_step) )
-        raise NotImplementedError()
-
-    @traceable
-    def run(self, question: str):
-        chain = self._define_chain(question)
-        return chain.invoke({self.qa_key: question})
-
     @property
     def qa_key(self):
         return self.cfg.prompt.qa_key
@@ -85,3 +78,35 @@ class BasePipeline:
     @property
     def ref_key(self):
         return self.cfg.prompt.ref_key
+
+    @property
+    def hist_key(self):
+        return self.cfg.prompt.history_key
+
+    @property
+    def session_id(self):
+        return self.cfg.exp.sid
+
+    @traceable(name="define-chain")
+    def _define_chain(self):
+        # (for debug) use RunnableLambda with debug_step fun ( | RunnableLambda(debug_step) )
+        raise NotImplementedError()
+
+    @traceable(name="run-single-turn")
+    def run(self, question: str):
+        chain = self._define_chain()
+        config = {"configurable": {"session_id": self.session_id}}
+        resp = chain.invoke({self.qa_key: question}, config=config)
+        return [resp]
+
+    @traceable(name="run-multi-turn")
+    def run_multi_turn(self, questions: List[str]):
+        chain = self._define_chain()
+        config = {"configurable": {"session_id": self.session_id}}
+
+        responses = []
+        for question in questions:
+            resp = chain.invoke({self.qa_key: question}, config=config)
+            responses.append(resp)
+
+        return responses

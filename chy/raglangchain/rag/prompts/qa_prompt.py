@@ -1,4 +1,4 @@
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from rag.utils.logger import get_logger
 
@@ -10,8 +10,11 @@ class QAPrompt:
         self.system_template = system_template
         self.human_template = human_template
 
-    def to_chain(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", self.system_template),
-            ("human", self.human_template),
-        ])
+    def to_chain(self, history_key):
+        return ChatPromptTemplate.from_messages(
+            [
+                ("system", self.system_template),
+                MessagesPlaceholder(history_key, optional=True),
+                ("human", self.human_template),
+            ]
+        )
