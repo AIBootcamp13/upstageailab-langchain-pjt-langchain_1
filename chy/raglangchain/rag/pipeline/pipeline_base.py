@@ -3,6 +3,7 @@ from typing import List, Dict
 from hydra.utils import instantiate
 from langchain_core.retrievers import BaseRetriever
 from langchain_core.runnables import RunnableLambda
+from langsmith import traceable
 
 from rag.datasets.base import BaseDataset
 from rag.llms.base_llm import BaseLLM
@@ -41,7 +42,7 @@ class BasePipeline:
         self.llm: BaseLLM = self._make_llm_client()
 
         if self.cfg.exp.make_embedding:
-            self.retriever.build(self.docs)
+            self.retriever.build(self.docs, self.cfg)
 
     def _make_dataset(self):
         return instantiate(self.cfg.dataset)
@@ -67,10 +68,12 @@ class BasePipeline:
     def _add_debug_chain(self):
         return RunnableLambda(debug_step)
 
+    @traceable(name="define chain")
     def _define_chain(self, question: str):
         # for debug use RunnableLambda with debug_step fun ( | RunnableLambda(debug_step) )
         raise NotImplementedError()
 
+    @traceable
     def run(self, question: str):
         chain = self._define_chain(question)
         return chain.invoke({self.qa_key: question})

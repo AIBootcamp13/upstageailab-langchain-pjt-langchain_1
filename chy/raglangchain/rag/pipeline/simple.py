@@ -1,5 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableSequence, RunnablePassthrough, RunnableLambda
+from langsmith import traceable
 
 from rag.pipeline.pipeline_base import BasePipeline
 from rag.reference.naive_referer import law_docs_to_ref
@@ -21,6 +22,7 @@ class SimplePipeline(BasePipeline):
 
         return {"answer": answer, "doc_count": len(docs), "used_docs": docs}
 
+    @traceable
     def _define_chain(self, question: str):
         ins = {
             self.ref_key: self.retriever | RunnableLambda(law_docs_to_ref),

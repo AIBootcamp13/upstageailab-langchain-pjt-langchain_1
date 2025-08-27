@@ -1,4 +1,4 @@
 _target_: rag.retriever.dense.DenseRetriever
 top_k: ${data.top_k}
-embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+embedding_model_name: "sentence-transformers/all-MiniLM-L6-v2"
 index_path: "indexes/dense.faiss"

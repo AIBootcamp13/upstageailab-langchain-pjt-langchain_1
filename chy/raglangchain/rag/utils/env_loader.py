@@ -1,6 +1,7 @@
 import os
 
 from dotenv import load_dotenv
+from langsmith import traceable
 from omegaconf import OmegaConf
 
 from rag.utils.logger import get_logger
@@ -16,5 +17,4 @@ def load_env(cfg):
     OmegaConf.update(cfg, "llm.api_key", upstage_api_key)
 
     logger.info(f"loaded env file (done)")
-
     return cfg

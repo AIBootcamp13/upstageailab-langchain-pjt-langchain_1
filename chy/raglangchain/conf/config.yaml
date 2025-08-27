@@ -1,6 +1,6 @@
 hydra: # hydra 로그 파일 생성 최대한 끄기
   run:
-    dir: ./outputs/
+    dir: ./hydra_log/
   job_logging:
     root:
       handlers: [ ]
@@ -22,6 +22,8 @@ defaults:
 
 data:
   top_k: 3
+  chunk_size: 4000
+  chunk_overlap: 400
   law_cases_dir: "data/law"
   # law_cases_dir: "data/dummy"
 
@@ -35,8 +37,9 @@ exp:
 
 langsmith:
   enabled: true
-  project: "LLMOps Evaluation"
-  tags: [ "RAG", "Legal" ]
+  project: "langchain benchmark"
+  metadata:
+    ver: "2025.08.27"
 
 opts:
   llms: [ "openai", "anthropic", "upstage", "custom", "mock" ]
