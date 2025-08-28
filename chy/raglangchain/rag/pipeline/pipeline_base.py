@@ -96,8 +96,7 @@ class BasePipeline:
     def run(self, question: str):
         chain = self._define_chain()
         config = {"configurable": {"session_id": self.session_id}}
-        resp = chain.invoke({self.qa_key: question}, config=config)
-        return [resp]
+        return chain.invoke({self.qa_key: question}, config=config)
 
     @traceable(name="run-multi-turn")
     def run_multi_turn(self, questions: List[str]):

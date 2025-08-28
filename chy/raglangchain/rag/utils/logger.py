@@ -1,5 +1,6 @@
 import logging
 import sys
+from contextlib import contextmanager
 
 
 def append_handler(logger):
@@ -21,3 +22,12 @@ def get_logger(name: str):
     if not logger.handlers:
         logger = append_handler(logger)
     return logger
+
+
+@contextmanager
+def log_block(logger):
+    logger.info("=" * 80)
+    try:
+        yield
+    finally:
+        logger.info("=" * 80)

@@ -27,7 +27,8 @@ class MockLLM(BaseLLM):
 
         # TODO: 사전 데이터 매핑 응담
         generated_message = BaseMessage(
-            content="MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다", type="ai"
+            content=f"ECHO CHATBOT 입니다. 다음과 같은 질문을 주셨습니다\n{messages}",
+            type="ai",
         )
         generation = ChatGeneration(message=generated_message)
         return ChatResult(generations=[generation])

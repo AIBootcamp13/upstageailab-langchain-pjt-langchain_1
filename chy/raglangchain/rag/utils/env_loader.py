@@ -9,7 +9,7 @@ from rag.utils.logger import get_logger
 logger = get_logger(__name__)
 
 
-def load_env(cfg):
+def extend_cfg_with_env(cfg):
     load_dotenv()
 
     # custom injection

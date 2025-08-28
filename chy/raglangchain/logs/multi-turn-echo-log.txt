@@ -1,0 +1,67 @@
+[250828-11:14:40] [INFO] [__main__:24] >>> LLMOps RAG 벤치마크 분석 (v0.0.1) <<<
+[250828-11:14:40] [INFO] [rag.utils.env_loader:19] loaded env file (done)
+[250828-11:14:40] [INFO] [rag.trace.langsmith:21] ================================================================================
+[250828-11:14:40] [INFO] [rag.trace.langsmith:24] langsmith tracer (disabled)
+[250828-11:14:40] [INFO] [rag.trace.langsmith:25] ================================================================================
+[250828-11:14:40] [INFO] [rag.pipeline.pipeline_base:38] build SimplePipeline
+[250828-11:14:40] [INFO] [rag.datasets.case_docs:69] 법률 데이터 디렉토리: data/law
+[250828-11:14:40] [INFO] [rag.datasets.case_docs:83] 총 18개 판례 로드 완료
+[250828-11:14:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-11:14:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-11:14:40] [INFO] [rag.llms.mock:22] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:23] 실제 모델이 전달받은 프롬프트
+[250828-11:14:40] [INFO] [rag.llms.mock:24] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:25] 
+[SystemMessage(content="당신은 대한민국 법률 전문가입니다.\nif 사용자가 법과 조금이라도 관련된 질문이나 대화 이력에 대해 질문한다면 종결어 없이 적절한 답변을 해주세요.\nelse 사용자가 법률과 전혀 관련이 없는 질문을 한다면 종결어만 응답하세요. (종결어: '저는 법률 관련 답변 밖에 하지 못 합니다')\n단, 종결어 이후에는 절대 추가적인 응답 없어야 합니다.\n", additional_kwargs={}, response_metadata={}), HumanMessage(content="---\n<질문>\n{'question': '안녕하세요. 당신은 법률 관련 답변을 할 수 있나요?', 'history': []}\n</질문>\n", additional_kwargs={}, response_metadata={})]
+[250828-11:14:40] [INFO] [rag.llms.mock:26] ================================================================================
+
+[250828-11:14:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-11:14:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-11:14:40] [INFO] [rag.llms.mock:22] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:23] 실제 모델이 전달받은 프롬프트
+[250828-11:14:40] [INFO] [rag.llms.mock:24] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:25] 
+[SystemMessage(content="당신은 대한민국 법률 전문가입니다.\nif 사용자가 법과 조금이라도 관련된 질문이나 대화 이력에 대해 질문한다면 종결어 없이 적절한 답변을 해주세요.\nelse 사용자가 법률과 전혀 관련이 없는 질문을 한다면 종결어만 응답하세요. (종결어: '저는 법률 관련 답변 밖에 하지 못 합니다')\n단, 종결어 이후에는 절대 추가적인 응답 없어야 합니다.\n", additional_kwargs={}, response_metadata={}), HumanMessage(content="---\n<질문>\n{'question': '어떤 사건을 위해 선임된 변호사는 판결 결과에 대한 책임이 없나요?', 'history': [HumanMessage(content='안녕하세요. 당신은 법률 관련 답변을 할 수 있나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={})]}\n</질문>\n", additional_kwargs={}, response_metadata={})]
+[250828-11:14:40] [INFO] [rag.llms.mock:26] ================================================================================
+
+[250828-11:14:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-11:14:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 1
+[250828-11:14:40] [INFO] [rag.llms.mock:22] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:23] 실제 모델이 전달받은 프롬프트
+[250828-11:14:40] [INFO] [rag.llms.mock:24] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:25] 
+[SystemMessage(content="당신은 대한민국 법률 전문가입니다.\nif 사용자가 법과 조금이라도 관련된 질문이나 대화 이력에 대해 질문한다면 종결어 없이 적절한 답변을 해주세요.\nelse 사용자가 법률과 전혀 관련이 없는 질문을 한다면 종결어만 응답하세요. (종결어: '저는 법률 관련 답변 밖에 하지 못 합니다')\n단, 종결어 이후에는 절대 추가적인 응답 없어야 합니다.\n", additional_kwargs={}, response_metadata={}), HumanMessage(content="---\n<질문>\n{'question': '직전에 제가 뭐라고 질문을 했었죠?', 'history': [HumanMessage(content='안녕하세요. 당신은 법률 관련 답변을 할 수 있나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='어떤 사건을 위해 선임된 변호사는 판결 결과에 대한 책임이 없나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={})]}\n</질문>\n", additional_kwargs={}, response_metadata={})]
+[250828-11:14:40] [INFO] [rag.llms.mock:26] ================================================================================
+
+[250828-11:14:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-11:14:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-11:14:40] [INFO] [rag.llms.mock:22] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:23] 실제 모델이 전달받은 프롬프트
+[250828-11:14:40] [INFO] [rag.llms.mock:24] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:25] 
+[SystemMessage(content="당신은 대한민국 법률 전문가입니다.\nif 사용자가 법과 조금이라도 관련된 질문이나 대화 이력에 대해 질문한다면 종결어 없이 적절한 답변을 해주세요.\nelse 사용자가 법률과 전혀 관련이 없는 질문을 한다면 종결어만 응답하세요. (종결어: '저는 법률 관련 답변 밖에 하지 못 합니다')\n단, 종결어 이후에는 절대 추가적인 응답 없어야 합니다.\n", additional_kwargs={}, response_metadata={}), HumanMessage(content="---\n<질문>\n{'question': '아까 질문에서 형사적인 책임은 없더라도 패소하였다면 변호사 비용은 일부만 부담하는 것이 맞지 않나요?', 'history': [HumanMessage(content='안녕하세요. 당신은 법률 관련 답변을 할 수 있나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='어떤 사건을 위해 선임된 변호사는 판결 결과에 대한 책임이 없나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='직전에 제가 뭐라고 질문을 했었죠?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={})]}\n</질문>\n", additional_kwargs={}, response_metadata={})]
+[250828-11:14:40] [INFO] [rag.llms.mock:26] ================================================================================
+
+[250828-11:14:40] [INFO] [rag.history.chat_history:25] 채팅 이력 조회 - 세션: [sess_001]
+[250828-11:14:40] [INFO] [rag.retriever.naive:49] 매칭 자료 개수: 3
+[250828-11:14:40] [INFO] [rag.llms.mock:22] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:23] 실제 모델이 전달받은 프롬프트
+[250828-11:14:40] [INFO] [rag.llms.mock:24] ================================================================================
+[250828-11:14:40] [INFO] [rag.llms.mock:25] 
+[SystemMessage(content="당신은 대한민국 법률 전문가입니다.\nif 사용자가 법과 조금이라도 관련된 질문이나 대화 이력에 대해 질문한다면 종결어 없이 적절한 답변을 해주세요.\nelse 사용자가 법률과 전혀 관련이 없는 질문을 한다면 종결어만 응답하세요. (종결어: '저는 법률 관련 답변 밖에 하지 못 합니다')\n단, 종결어 이후에는 절대 추가적인 응답 없어야 합니다.\n", additional_kwargs={}, response_metadata={}), HumanMessage(content="---\n<질문>\n{'question': '위에서 논의한 내용을 영어로 정리해주세요', 'history': [HumanMessage(content='안녕하세요. 당신은 법률 관련 답변을 할 수 있나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='어떤 사건을 위해 선임된 변호사는 판결 결과에 대한 책임이 없나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='직전에 제가 뭐라고 질문을 했었죠?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={}), HumanMessage(content='아까 질문에서 형사적인 책임은 없더라도 패소하였다면 변호사 비용은 일부만 부담하는 것이 맞지 않나요?', additional_kwargs={}, response_metadata={}), AIMessage(content='MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다', additional_kwargs={}, response_metadata={})]}\n</질문>\n", additional_kwargs={}, response_metadata={})]
+[250828-11:14:40] [INFO] [rag.llms.mock:26] ================================================================================
+
+[250828-11:14:40] [INFO] [__main__:15] ================================================================================
+[250828-11:14:40] [INFO] [__main__:17] LLM 응답[0]:
+MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다
+[250828-11:14:40] [INFO] [__main__:17] LLM 응답[1]:
+MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다
+[250828-11:14:40] [INFO] [__main__:17] LLM 응답[2]:
+MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다
+[250828-11:14:40] [INFO] [__main__:17] LLM 응답[3]:
+MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다
+[250828-11:14:40] [INFO] [__main__:17] LLM 응답[4]:
+MOCK CHATBOT 입니다. 해당 데이터는 답변이 준비되지 않았습니다
+[250828-11:14:40] [INFO] [__main__:18] ================================================================================
+
+[250828-11:14:40] [INFO] [__main__:31] >>> complete <<<
