@@ -24,7 +24,7 @@
 | ![문국현](https://avatars.githubusercontent.com/u/167870439?v=4) | ![염창환](https://avatars.githubusercontent.com/cat2oon) | ![채병기](https://avatars.githubusercontent.com/avatar196kc) | ![김문수](https://avatars.githubusercontent.com/ashrate) | ![이상현](https://avatars.githubusercontent.com/yourshlee) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
 |            [문국현](https://github.com/GH-Door)             |            [염창환](https://github.com/cat2oon)             |            [채병기](https://github.com/avatar196kc)             |            [김문수](https://github.com/ashrate)             |            [이상현](https://github.com/yourshlee)             |
-|                            팀장, 담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |
+|                            팀장, 데이터 분석, RAG 구조화, 환경설정(UV), 베이스라인 코드 공유                           |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |
 <br>
 
 ## 개발 환경 및 기술 스택
