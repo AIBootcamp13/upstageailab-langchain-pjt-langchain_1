@@ -133,7 +133,7 @@ graph TD
     B --> C[관련 판례 검색]
     C --> D[Top-3 판례 선별]
     D --> E[법률 전문 프롬프트]
-    E --> F[Upstage Solar Pro 2]
+    E --> F[OpenAI, Anthropic, Upstage, etc LLM 응답]
     F --> G[구조화된 법률 답변]
 ```
 
