@@ -157,6 +157,29 @@ chain = (
 - Python 3.11 이상
 - UPSTAGE_API_KEY 환경변수 설정
 
+## upstage 서버 환경에서 faiss-gpu
+
+```shell
+# Install with fixed CUDA 12.1 (requires NVIDIA Driver ≥R530)
+pip install 'faiss-gpu-cu12[fix-cuda]'
+```
+
+## GPU 기반 인덱스 체크
+
+```python
+import faiss
+
+print(f"FAISS version: {faiss.__version__}")
+
+try:
+    res = faiss.StandardGpuResources()
+    index = faiss.GpuIndexFlatL2(res, 128)  # Example for a 128-dimension index
+    print("FAISS GPU index created successfully.")
+except Exception as e:
+    print(f"Error creating FAISS GPU index: {e}")
+```
+
+
 ### **설치**
 ```bash
 # 1. 저장소 클론
