@@ -60,12 +60,12 @@ chy/raglangchain/
 ├── conf/                       # ⚙️ 설정 파일들
 │   ├── config.yaml            # 메인 설정
 │   ├── llm/
-│   │   ├── upstage.yaml       # Upstage Solar Pro 2 설정
+│   │   ├── upstage.yaml       # Upstage 설정
 │   │   ├── openai.yaml        # OpenAI 설정
 │   │   └── anthropic.yaml     # Claude 설정
 │   ├── retriever/
 │   │   ├── naive.yaml         # 키워드 매칭 검색기
-│   │   ├── dense.yaml         # 밀집 임베딩 검색기
+│   │   ├── dense.yaml         # faiss 기반 임베딩 검색기
 │   │   └── hybrid.yaml        # 하이브리드 검색기
 │   ├── dataset/
 │   │   └── case_docs.yaml     # 법률 데이터셋 설정
