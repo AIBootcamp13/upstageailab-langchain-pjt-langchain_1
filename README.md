@@ -1,14 +1,14 @@
 # 법률 RAG 시스템 (Legal RAG System)
 
 > **LangChain 기반 대한민국 판례 질의응답 시스템**  
-> 17개 대법원 판례를 활용한 법률 전문 RAG (Retrieval-Augmented Generation) 구현
+> AI HUB 대법원 판례 데이터셋 활용한 법률 전문 RAG (Retrieval-Augmented Generation) 구현
 
 <br>
 
 ## 프로젝트 소개
 
 ### 프로젝트 개요
-이 프로젝트는 **LangChain**과 **Upstage Solar Pro 2** 모델을 활용하여 구축한 법률 전문 질의응답 시스템입니다. 대한민국 대법원 판례 17개를 기반으로 사용자의 법률 질문에 대해 관련 판례와 법조항을 인용하여 전문적인 답변을 제공합니다.
+이 프로젝트는 **LangChain**과 **Upstage Solar Pro 2** 모델을 활용하여 구축한 법률 전문 질의응답 시스템입니다. 대한민국 대법원 판례를 기반으로 사용자의 법률 질문에 대해 관련 판례와 법조항을 인용하여 전문적인 답변을 제공합니다.
 
 ### 핵심 특징
 - **도메인 특화**: 법률 분야에 최적화된 프롬프트 엔지니어링
@@ -36,10 +36,10 @@
 - **의존성 관리**: UV, Poetry
 
 ### **AI/ML 스택**
-- **Language Model**: Upstage Solar Pro 2
-- **Embeddings**: OpenAI Embeddings (준비됨)
+- **Language Model**: Upstage / OpenAI / Anthropic / (최종 코드에는 Google 미구현)
+- **Embeddings**: Jina V3 / sentence-transformers/all-MiniLM-L6-v2 / OpenAI Embeddings
 - **Vector Store**: FAISS
-- **Retrieval**: Naive Keyword Matching
+- **Retrieval**: Naive Keyword Matching, Dense Embedding Similarity Based Matching
 
 ### **개발 도구**
 - **버전 관리**: Git, GitHub
@@ -51,6 +51,7 @@
 <br>
 
 ## 프로젝트 구조
+- main merge 이전 코드 참고 (https://github.com/AIBootcamp13/upstageailab-langchain-pjt-langchain_1/tree/chy/wip4/chy/raglangchain)
 
 ```
 chy/raglangchain/
@@ -105,7 +106,7 @@ chy/raglangchain/
 
 ## 구현 기능
 
-### **1. 지능형 판례 검색**
+### **1. naive, embedding ssm 판례 검색**
 - **키워드 기반 매칭**: 사용자 질문에서 핵심 키워드 추출하여 관련 판례 검색
 - **스코어링 시스템**: 키워드 빈도 × 길이 가중치를 통한 정확한 관련도 계산
 - **Top-K 선택**: 가장 관련성 높은 상위 3개 판례 자동 선별
