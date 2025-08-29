@@ -2,6 +2,7 @@
 
 > **LangChain 기반 대한민국 판례 질의응답 시스템**  
 > AI HUB 대법원 판례 데이터셋 활용한 법률 전문 RAG (Retrieval-Augmented Generation) 구현
+> https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71723
 
 <br>
 
